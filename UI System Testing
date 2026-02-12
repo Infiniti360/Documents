@@ -1,0 +1,176 @@
+
+
+UI System Testing
+
+Definition
+
+UI System Testing validates the complete user interface of the application in an integrated environment to ensure it behaves correctly from an end-user perspective. It confirms that UI components function cohesively with backend services, business logic, and data layers.
+
+This testing is performed after integration and focuses on validating the system as a whole through the user interface.
+
+⸻
+
+Objectives
+	•	Validate end-to-end user workflows through the UI
+	•	Ensure UI components correctly interact with backend services
+	•	Verify navigation, page transitions, and user journeys
+	•	Confirm data consistency between UI and underlying systems
+	•	Validate cross-browser and responsive behavior (if in scope)
+
+⸻
+
+Identification Criteria
+
+A scenario falls under UI System Testing when:
+	•	The test validates complete workflows across multiple screens
+	•	Backend integration is indirectly validated through UI behavior
+	•	User role-based access or permissions are verified through UI
+	•	System behavior is validated in a production-like environment
+
+⸻
+
+Scope Coverage
+
+UI System Testing typically includes:
+	•	End-to-end business flows
+	•	Navigation validation
+	•	Role-based access validation
+	•	UI interaction with APIs and database
+	•	Error handling at system level
+	•	Browser compatibility (if applicable)
+	•	Basic usability and rendering consistency
+
+⸻
+
+Example Scenarios
+
+Example 1 – User Registration Flow
+	•	User fills registration form
+	•	System validates input
+	•	Account is created in database
+	•	Confirmation email is triggered
+	•	User is redirected to login page
+
+This validates UI behavior along with backend integration.
+
+⸻
+
+Example 2 – Booking Flow
+	•	User selects available slot
+	•	Slot availability updates dynamically
+	•	Payment is processed
+	•	Booking confirmation displayed
+	•	Booking record stored and retrievable
+
+This scenario validates full system behavior through UI.
+
+⸻
+
+Entry Criteria
+	•	Build deployed in integrated environment
+	•	Core modules integrated
+	•	APIs available and stable
+
+⸻
+
+Exit Criteria
+	•	Critical and major UI workflow defects resolved
+	•	Core business journeys validated successfully
+
+⸻
+
+UI Form Validation Testing
+
+Definition
+
+UI Form Validation Testing focuses specifically on validating input controls, field-level validations, and user feedback mechanisms within forms.
+
+This testing ensures that data entered by users adheres to defined validation rules before submission.
+
+⸻
+
+Objectives
+	•	Verify mandatory field validations
+	•	Validate format and data type restrictions
+	•	Confirm boundary and length constraints
+	•	Ensure proper error messaging
+	•	Prevent invalid data submission
+
+⸻
+
+Identification Criteria
+
+A scenario falls under UI Form Validation Testing when:
+	•	It validates field-level rules
+	•	It tests invalid or malformed inputs
+	•	It verifies inline validation messages
+	•	It ensures client-side and/or server-side validation enforcement
+
+⸻
+
+Types of Validations Covered
+
+1. Mandatory Field Validation
+	•	Required fields cannot be left empty
+
+2. Format Validation
+	•	Email format
+	•	Phone number format
+	•	Date format
+
+3. Length Validation
+	•	Minimum and maximum character limits
+
+4. Data Type Validation
+	•	Numeric-only fields
+	•	Alphabet-only fields
+
+5. Boundary Validation
+	•	Minimum and maximum value limits
+
+⸻
+
+Example Scenarios
+
+Example 1 – Email Field Validation
+	•	Enter invalid email format → Error displayed
+	•	Enter valid email format → Accepted
+	•	Leave email empty → Mandatory field error
+
+⸻
+
+Example 2 – Password Field Validation
+
+Password rules: 8–20 characters, at least one special character
+	•	7 characters → Rejected
+	•	8 characters without special character → Rejected
+	•	8 characters with special character → Accepted
+	•	21 characters → Rejected
+
+⸻
+
+Example 3 – Numeric Input Field
+	•	Enter alphabets in numeric field → Rejected
+	•	Enter special characters → Rejected
+	•	Enter valid numeric value within limit → Accepted
+
+⸻
+
+Validation Layers
+
+UI Form Validation Testing may include:
+	•	Client-side validation (immediate feedback)
+	•	Server-side validation (upon submission)
+	•	Error message consistency and clarity
+	•	Prevention of bypass through direct API calls (if in scope)
+
+⸻
+
+Key Distinction
+
+UI System Testing validates complete user journeys and system behavior through the interface.
+
+UI Form Validation Testing focuses specifically on field-level input validation within forms.
+
+Form validation is a subset of UI testing but may be executed independently during development or feature-level validation.
+
