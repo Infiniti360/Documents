@@ -1,0 +1,222 @@
+Below is a structured documentation draft written in a Test Architecture tone. This can be directly added to Confluence.
+
+⸻
+
+Acceptance Testing (UAT) and System Testing
+
+1. Acceptance Testing (UAT)
+
+Definition
+
+Acceptance Testing, commonly referred to as User Acceptance Testing (UAT), is the final validation phase conducted to confirm that the system meets business requirements and is ready for release from a user and stakeholder perspective.
+
+UAT focuses on validating business value rather than technical correctness.
+
+⸻
+
+Objectives
+	•	Confirm the system supports real-world business workflows
+	•	Validate requirements from a user’s perspective
+	•	Ensure contractual or business acceptance criteria are met
+	•	Obtain formal stakeholder approval for release
+
+⸻
+
+Identification Criteria
+
+A scenario falls under Acceptance Testing when:
+	•	It validates end-to-end business processes
+	•	It confirms the system solves the intended business problem
+	•	It is executed by business users or product stakeholders
+	•	It determines release readiness
+
+⸻
+
+Example Scenarios
+	•	Complete membership enrollment process from registration to payment confirmation
+	•	Validate refund processing workflow according to business policy
+	•	Confirm reporting dashboard reflects accurate business metrics
+
+⸻
+
+Key Characteristics
+	•	Focused on business validation
+	•	Executed in production-like environment
+	•	Based on real-world use cases
+	•	Formal sign-off required
+
+⸻
+
+2. System Testing
+
+Definition
+
+System Testing validates the complete and fully integrated application against functional and non-functional requirements.
+
+It ensures that the system as a whole behaves according to specifications before it is presented for UAT.
+
+⸻
+
+Objectives
+	•	Validate integrated modules
+	•	Confirm end-to-end functionality
+	•	Verify system-level requirements
+	•	Identify defects before business validation
+
+⸻
+
+Identification Criteria
+
+A scenario falls under System Testing when:
+	•	It validates the complete application
+	•	It involves integrated modules
+	•	It is executed by QA in a controlled environment
+	•	It verifies both functional and non-functional requirements
+
+⸻
+
+Example Scenarios
+	•	User registration integrated with authentication and database
+	•	Booking system integrated with payment gateway
+	•	Role-based access across multiple modules
+
+⸻
+
+Key Distinction
+
+System Testing validates that the system works correctly.
+Acceptance Testing validates that the system meets business expectations.
+
+⸻
+
+Smoke Testing
+
+Definition
+
+Smoke Testing is a high-level validation performed on a new build to ensure that critical functionalities are operational and the build is stable for further testing.
+
+⸻
+
+Objectives
+	•	Verify build deployability
+	•	Confirm application accessibility
+	•	Validate critical system paths
+	•	Detect major blocking defects early
+
+⸻
+
+Identification Criteria
+
+A scenario qualifies as Smoke Testing when:
+	•	It covers critical functionality
+	•	Failure would block further testing
+	•	It validates system stability at a high level
+
+⸻
+
+Example Scenarios
+	•	Application launches successfully
+	•	User login is functional
+	•	Core transaction can be completed
+	•	Primary navigation works
+
+⸻
+
+Characteristics
+	•	Limited scope
+	•	Executed on every major build
+	•	Quick execution
+	•	Acts as build acceptance by QA
+
+⸻
+
+End-to-End (E2E) Testing
+
+Definition
+
+End-to-End Testing validates complete business flows across multiple systems, components, and integrations, simulating real user behavior from start to finish.
+
+⸻
+
+Objectives
+	•	Validate cross-system data flow
+	•	Confirm integrated workflows
+	•	Ensure real-world user journey consistency
+	•	Detect integration and environment-related issues
+
+⸻
+
+Identification Criteria
+
+A scenario is E2E when:
+	•	It spans multiple modules or systems
+	•	It validates start-to-finish workflow
+	•	It includes external dependencies (if applicable)
+
+⸻
+
+Example Scenarios
+	•	User registers → selects service → makes payment → receives confirmation → transaction recorded
+	•	Booking created → payment processed → notification triggered → report updated
+
+⸻
+
+Characteristics
+	•	Broad scope
+	•	Slower execution
+	•	High business impact coverage
+	•	Often automated for critical flows
+
+⸻
+
+Regression Testing
+
+Definition
+
+Regression Testing ensures that existing, previously validated functionality continues to operate correctly after changes such as enhancements, bug fixes, configuration updates, or refactoring.
+
+⸻
+
+Objectives
+	•	Detect unintended side effects
+	•	Protect system stability
+	•	Maintain release quality
+	•	Reduce risk of production defects
+
+⸻
+
+Identification Criteria
+
+A scenario qualifies as Regression Testing when:
+	•	It validates previously stable functionality
+	•	It is executed after a change
+	•	It ensures no impact from new implementations
+
+⸻
+
+Example Scenarios
+
+After adding a new payment method:
+	•	Validate existing payment methods still work
+	•	Verify refund process
+	•	Confirm transaction history remains accurate
+	•	Validate invoice generation
+
+⸻
+
+Characteristics
+	•	Repetitive execution across releases
+	•	Often automated
+	•	Risk-based selection possible
+	•	Critical for release stability
+
+⸻
+
+Summary Perspective
+	•	System Testing – QA validates complete integrated system
+	•	Acceptance Testing (UAT) – Business validates readiness and usability
+	•	Smoke Testing – Validate build stability at a high level
+	•	E2E Testing – Validate complete cross-system workflows
+	•	Regression Testing – Ensure unchanged functionality remains stable
+
+Classification should always be based on the objective and scope of validation, not merely on the test steps themselves.
